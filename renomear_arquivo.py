@@ -3,8 +3,8 @@ import shutil
 from datetime import datetime, timedelta
 
 # Configurações
-diretorio = r"C:\Users\RennanCosta\OneDrive - Diretório Padrão\Relatório SLA Rede D'Or"
-nome_base = "Acompanhamento Validação Time REDE D'Or.xlsx.xlsm"  # NOME CORRETO!
+diretorio = r"C:\Users\\OneDrive - Diretório Padrão\"
+nome_base = ""  # NOME CORRETO!
 data_ontem = (datetime.now() - timedelta(days=0)).strftime('%d.%m')  # Formato DD.MM
 novo_nome = f"Acompanhamento Validação Time REDE D'Or {data_ontem}.xlsx.xlsm"  # Padrão existente
 
@@ -30,9 +30,10 @@ while os.path.exists(caminho_novo):
 # Cria a cópia (mantém o original)
 try:
     shutil.copy2(caminho_original, caminho_novo)
-    print(f"✅ Cópia criada com sucesso: {novo_nome}")
+    print(f" Cópia criada com sucesso: {novo_nome}")
     print(f"   Original preservado: {nome_base}")
 except PermissionError:
-    print("❌ Erro: O arquivo está aberto no Excel. Feche-o e tente novamente.")
+    print(" Erro: O arquivo está aberto no Excel. Feche-o e tente novamente.")
 except Exception as e:
-    print(f"❌ Erro inesperado: {e}")
+
+    print(f" Erro inesperado: {e}")
