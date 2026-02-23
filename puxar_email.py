@@ -5,9 +5,9 @@ import shutil
 
 def baixar_anexo_outlook():
     # Configurações
-    remetente = "Henrique Bento"
-    nome_anexo_base = "Relatório SLA Rede D'OR"
-    pasta_destino = r"C:\Users\RennanCosta\OneDrive - Diretório Padrão\Relatório SLA Rede D'Or\Base"
+    remetente = ""
+    nome_anexo_base = ""
+    pasta_destino = r"C:\Users\\OneDrive - Diretório Padrão\\"
     
     # Criar pasta de destino se não existir
     if not os.path.exists(pasta_destino):
@@ -54,4 +54,5 @@ def baixar_anexo_outlook():
         print("Nenhum anexo correspondente foi encontrado nos e-mails recentes.")
 
 if __name__ == "__main__":
+
     baixar_anexo_outlook()
